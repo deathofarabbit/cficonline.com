@@ -1,8 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Lanyard } from "@/lib/lanyard";
+
+const lanyard = new Lanyard({ id: "943077608227217478"});
+
+lanyard.on('INIT_STATE', (data) => {
+	console.log(data);
+});
 
 ---
 
 <Layout>
-
+	<div class="container">
+		<h1>claire</h1>
+		<div>meow</div>
+	</div>
 </Layout>

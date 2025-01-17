@@ -15,11 +15,10 @@ title = title ?? Astro.site?.host ?? "";
 		<meta charset="UTF-8" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
 	</head>
 
-	<body class="p-8">
+	<body>
 		<slot />
 	</body>
 </html>
