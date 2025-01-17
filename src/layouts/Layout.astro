@@ -1,0 +1,25 @@
+---
+import '@/styles/global.scss';
+
+interface Props {
+	title?: string;
+}
+
+let { title } = Astro.props;
+title = title ?? Astro.site?.host ?? "";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+	</head>
+
+	<body class="p-8">
+		<slot />
+	</body>
+</html>
